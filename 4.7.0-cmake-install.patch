@@ -1,0 +1,13 @@
+--- origsrc/qtruby-4.7.0/src/CMakeLists.txt	2011-05-20 15:33:43.000000000 -0500
++++ src/qtruby-4.7.0/src/CMakeLists.txt	2011-08-05 06:21:20.000000000 -0500
+@@ -67,6 +67,9 @@ target_link_libraries(  qtruby4
+ set_target_properties(qtruby4shared PROPERTIES VERSION 2.0.0 SOVERSION 2)
+ 
+-install(TARGETS qtruby4shared EXPORT QtRuby4Export DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
++install(TARGETS qtruby4shared EXPORT QtRuby4Export
++	LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX}
++	RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX}/bin
++	ARCHIVE DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
+ install(TARGETS qtruby4 DESTINATION ${CUSTOM_RUBY_SITE_ARCH_DIR})
+ install(EXPORT QtRuby4Export DESTINATION ${CMAKE_INSTALL_PREFIX}/share/qtruby4/cmake NAMESPACE QTRUBY4_ )
+ 

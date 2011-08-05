@@ -1,0 +1,18 @@
+ORIG_PN="qtruby"
+inherit ruby kde4
+
+
+SRC_URI="mirror://kde/stable/${PV}/src/${ORIG_PN}-${PV}.tar.bz2"
+PATCH_URI="4.7.0-ruby-module-suffix.patch
+           4.7.0-no-undefined.patch
+           4.7.0-cmake-install.patch"
+
+
+PKG_NAMES="ruby-qt4"
+ruby_qt4_CONTENTS="--exclude=Qt3.rb usr/"
+PKG_IGNORE="${RUBY_VENDORLIB#/}/Qt3.rb"
+
+CYGCMAKE_ARGS="
+	-DCUSTOM_RUBY_SITE_ARCH_DIR=${RUBY_VENDORARCH}
+	-DCUSTOM_RUBY_SITE_LIB_DIR=${RUBY_VENDORLIB}
+"

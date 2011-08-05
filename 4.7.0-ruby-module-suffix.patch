@@ -1,0 +1,98 @@
+--- origsrc/qtruby-4.7.0/modules/phonon/CMakeLists.txt	2011-05-20 15:33:43.000000000 -0500
++++ src/qtruby-4.7.0/modules/phonon/CMakeLists.txt	2011-08-05 06:21:20.000000000 -0500
+@@ -7,7 +7,7 @@ target_link_libraries(rubyphonon
+     ${SMOKE_PHONON_LIBRARY}
+     qtruby4shared
+ )
+-set_target_properties(rubyphonon PROPERTIES PREFIX "" OUTPUT_NAME phonon)
++set_target_properties(rubyphonon PROPERTIES PREFIX "" SUFFIX ".so" OUTPUT_NAME phonon)
+ install(TARGETS rubyphonon DESTINATION ${CUSTOM_RUBY_SITE_ARCH_DIR})
+ install(FILES phonon.rb DESTINATION ${CUSTOM_RUBY_SITE_LIB_DIR}/phonon)
+ 
+--- origsrc/qtruby-4.7.0/modules/qscintilla/CMakeLists.txt	2011-05-20 15:33:43.000000000 -0500
++++ src/qtruby-4.7.0/modules/qscintilla/CMakeLists.txt	2011-08-05 06:21:20.000000000 -0500
+@@ -8,7 +8,7 @@ target_link_libraries(rubyqscintilla
+     ${SMOKE_QSCI_LIBRARY}
+     qtruby4shared
+ )
+-set_target_properties(rubyqscintilla PROPERTIES PREFIX "" OUTPUT_NAME qscintilla)
++set_target_properties(rubyqscintilla PROPERTIES PREFIX "" SUFFIX ".so" OUTPUT_NAME qscintilla)
+ install(TARGETS rubyqscintilla DESTINATION ${CUSTOM_RUBY_SITE_ARCH_DIR})
+ install(FILES qscintilla.rb DESTINATION ${CUSTOM_RUBY_SITE_LIB_DIR}/qscintilla)
+ 
+--- origsrc/qtruby-4.7.0/modules/qtdeclarative/CMakeLists.txt	2011-05-20 15:33:43.000000000 -0500
++++ src/qtruby-4.7.0/modules/qtdeclarative/CMakeLists.txt	2011-08-05 06:21:20.000000000 -0500
+@@ -8,7 +8,7 @@ target_link_libraries(rubyqtdeclarative
+     ${SMOKE_QTDECLARATIVE_LIBRARY}
+     qtruby4shared
+ )
+-set_target_properties(rubyqtdeclarative PROPERTIES PREFIX "" OUTPUT_NAME qtdeclarative)
++set_target_properties(rubyqtdeclarative PROPERTIES PREFIX "" SUFFIX ".so" OUTPUT_NAME qtdeclarative)
+ install(TARGETS rubyqtdeclarative DESTINATION ${CUSTOM_RUBY_SITE_ARCH_DIR})
+ install(FILES qtdeclarative.rb DESTINATION ${CUSTOM_RUBY_SITE_LIB_DIR}/qtdeclarative)
+ 
+--- origsrc/qtruby-4.7.0/modules/qtscript/CMakeLists.txt	2011-05-20 15:33:43.000000000 -0500
++++ src/qtruby-4.7.0/modules/qtscript/CMakeLists.txt	2011-08-05 06:21:20.000000000 -0500
+@@ -9,7 +9,7 @@ target_link_libraries(qtscript
+     ${SMOKE_QTSCRIPT_LIBRARY}
+     qtruby4shared
+ )
+-set_target_properties(qtscript PROPERTIES PREFIX "")
++set_target_properties(qtscript PROPERTIES PREFIX "" SUFFIX ".so")
+ install(TARGETS qtscript DESTINATION ${CUSTOM_RUBY_SITE_ARCH_DIR})
+ install(FILES qtscript.rb DESTINATION ${CUSTOM_RUBY_SITE_LIB_DIR}/qtscript)
+ 
+--- origsrc/qtruby-4.7.0/modules/qttest/CMakeLists.txt	2011-05-20 15:33:43.000000000 -0500
++++ src/qtruby-4.7.0/modules/qttest/CMakeLists.txt	2011-08-05 06:21:20.000000000 -0500
+@@ -8,7 +8,7 @@ target_link_libraries(qttest
+     ${SMOKE_QTTEST_LIBRARY}
+     qtruby4shared
+ )
+-set_target_properties(qttest PROPERTIES PREFIX "")
++set_target_properties(qttest PROPERTIES PREFIX "" SUFFIX ".so")
+ install(TARGETS qttest DESTINATION ${CUSTOM_RUBY_SITE_ARCH_DIR})
+ install(FILES qttest.rb DESTINATION ${CUSTOM_RUBY_SITE_LIB_DIR}/qttest)
+ 
+--- origsrc/qtruby-4.7.0/modules/qtuitools/CMakeLists.txt	2011-05-20 15:33:43.000000000 -0500
++++ src/qtruby-4.7.0/modules/qtuitools/CMakeLists.txt	2011-08-05 06:21:20.000000000 -0500
+@@ -7,7 +7,7 @@ target_link_libraries(rubyqtuitools
+     ${SMOKE_QTUITOOLS_LIBRARY}
+     qtruby4shared
+ )
+-set_target_properties(rubyqtuitools PROPERTIES PREFIX "" OUTPUT_NAME qtuitools)
++set_target_properties(rubyqtuitools PROPERTIES PREFIX "" SUFFIX ".so" OUTPUT_NAME qtuitools)
+ install(TARGETS rubyqtuitools DESTINATION ${CUSTOM_RUBY_SITE_ARCH_DIR})
+ install(FILES qtuitools.rb DESTINATION ${CUSTOM_RUBY_SITE_LIB_DIR}/qtuitools)
+ 
+--- origsrc/qtruby-4.7.0/modules/qtwebkit/CMakeLists.txt	2011-05-20 15:33:43.000000000 -0500
++++ src/qtruby-4.7.0/modules/qtwebkit/CMakeLists.txt	2011-08-05 06:21:20.000000000 -0500
+@@ -8,7 +8,7 @@ target_link_libraries(rubyqtwebkit
+     ${SMOKE_QTWEBKIT_LIBRARY}
+     qtruby4shared
+ )
+-set_target_properties(rubyqtwebkit PROPERTIES PREFIX "" OUTPUT_NAME qtwebkit)
++set_target_properties(rubyqtwebkit PROPERTIES PREFIX "" SUFFIX ".so" OUTPUT_NAME qtwebkit)
+ install(TARGETS rubyqtwebkit DESTINATION ${CUSTOM_RUBY_SITE_ARCH_DIR})
+ install(FILES qtwebkit.rb DESTINATION ${CUSTOM_RUBY_SITE_LIB_DIR}/qtwebkit)
+ 
+--- origsrc/qtruby-4.7.0/modules/qwt/CMakeLists.txt	2011-05-20 15:33:43.000000000 -0500
++++ src/qtruby-4.7.0/modules/qwt/CMakeLists.txt	2011-08-05 06:21:20.000000000 -0500
+@@ -9,7 +9,7 @@ target_link_libraries(rubyqwt
+     ${SMOKE_QWT_LIBRARY}
+     qtruby4shared
+ )
+-set_target_properties(rubyqwt PROPERTIES PREFIX "" OUTPUT_NAME qwt)
++set_target_properties(rubyqwt PROPERTIES PREFIX "" SUFFIX ".so" OUTPUT_NAME qwt)
+ install(TARGETS rubyqwt DESTINATION ${CUSTOM_RUBY_SITE_ARCH_DIR})
+ install(FILES qwt.rb DESTINATION ${CUSTOM_RUBY_SITE_LIB_DIR}/qwt)
+ 
+--- origsrc/qtruby-4.7.0/src/CMakeLists.txt	2011-05-20 15:33:43.000000000 -0500
++++ src/qtruby-4.7.0/src/CMakeLists.txt	2011-08-05 06:21:20.000000000 -0500
+@@ -63,6 +63,6 @@ target_link_libraries(  qtruby4
+ 
+ # target_link_libraries(qtrubyinternal ${QT_QTCORE_LIBRARY} ${RUBY_LIBRARY} ${QT_QTNETWORK_LIBRARY})
+ 
+-set_target_properties(qtruby4 PROPERTIES PREFIX "")
++set_target_properties(qtruby4 PROPERTIES PREFIX "" SUFFIX ".so")
+ set_target_properties(qtruby4shared PROPERTIES VERSION 2.0.0 SOVERSION 2)
+ 

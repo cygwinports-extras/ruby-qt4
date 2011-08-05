@@ -1,0 +1,4 @@
+category: KDE Ruby
+requires: libgcc1 libphonon4 libQtCore4 libQtDBus4 libQtDeclarative4 libQtGui4 libQtNetwork4 libQtScript4 libQtWebKit4 libQtXml4 libsmokebase3 libsmokeqt3 libstdc++6 ruby
+sdesc: "Ruby Qt4 bindings"
+ldesc: "SMOKE-based Ruby language bindings for the Qt libraries"

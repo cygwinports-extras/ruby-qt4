@@ -1,0 +1,11 @@
+--- origsrc/qtruby-4.7.0/modules/qtdeclarative/CMakeLists.txt	2011-08-05 06:24:12.085851200 -0500
++++ src/qtruby-4.7.0/modules/qtdeclarative/CMakeLists.txt	2011-08-05 06:29:42.314739200 -0500
+@@ -4,7 +4,7 @@ INCLUDE_DIRECTORIES (${QT_INCLUDES})
+ set(rubyqtdeclarative_LIBRARY_SRC qtdeclarative.cpp qtdeclarativehandlers.cpp)
+ add_library(rubyqtdeclarative MODULE ${rubyqtdeclarative_LIBRARY_SRC})
+ target_link_libraries(rubyqtdeclarative
+-    ${QT_QTWEBKIT_LIBRARY}
++    ${QT_QTDECLARATIVE_LIBRARY}
+     ${SMOKE_QTDECLARATIVE_LIBRARY}
+     qtruby4shared
+ )
