@@ -2,10 +2,8 @@ ORIG_PN="qtruby"
 inherit ruby kde4
 
 
-SRC_URI="mirror://kde/stable/${PV}/src/${ORIG_PN}-${PV}.tar.bz2"
 PATCH_URI="4.7.0-ruby-module-suffix.patch
            4.7.0-cmake-install.patch"
-
 
 PKG_NAMES="ruby-qt4"
 ruby_qt4_CONTENTS="--exclude=Qt3.rb usr/"
