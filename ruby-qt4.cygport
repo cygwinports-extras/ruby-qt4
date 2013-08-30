@@ -1,6 +1,12 @@
 ORIG_PN="qtruby"
 inherit ruby kde4
 
+NAME="ruby-qt4"
+VERSION=4.10.5
+RELEASE=1
+CATEGORY="Ruby"
+SUMMARY="Ruby Qt4 bindings"
+DESCRIPTION="SMOKE-based Ruby language bindings for the Qt libraries"
 
 PATCH_URI="4.7.0-ruby-module-suffix.patch
            4.7.0-cmake-install.patch"
