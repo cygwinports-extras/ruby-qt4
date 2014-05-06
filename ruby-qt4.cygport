@@ -2,7 +2,7 @@ ORIG_PN="qtruby"
 inherit ruby kde4
 
 NAME="ruby-qt4"
-VERSION=4.11.5
+VERSION=4.12.5
 RELEASE=1
 CATEGORY="Ruby"
 SUMMARY="Ruby Qt4 bindings"
