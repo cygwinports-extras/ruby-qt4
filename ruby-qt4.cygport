@@ -3,7 +3,7 @@ inherit ruby kde4
 
 NAME="ruby-qt4"
 VERSION=4.12.5
-RELEASE=1
+RELEASE=2
 CATEGORY="Ruby"
 SUMMARY="Ruby Qt4 bindings"
 DESCRIPTION="SMOKE-based Ruby language bindings for the Qt libraries"
@@ -13,7 +13,6 @@ PATCH_URI="4.7.0-ruby-module-suffix.patch
 
 PKG_NAMES="ruby-qt4"
 ruby_qt4_CONTENTS="--exclude=Qt3.rb usr/"
-PKG_IGNORE="${RUBY_VENDORLIB#/}/Qt3.rb"
 
 CYGCMAKE_ARGS="
 	-DCUSTOM_RUBY_SITE_ARCH_DIR=${RUBY_VENDORARCH}
